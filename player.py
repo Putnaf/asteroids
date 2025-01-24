@@ -22,15 +22,14 @@ class Player(CircleShape):
         return [a, b, c]
 
     def draw(self, screen):
-        #print("drawing")
+        
         pygame.draw.polygon(screen, "white", self.triangle(), 2)
     
     def update(self, dt):
-        #print("updating")
+        
         keys = pygame.key.get_pressed()
 
         if keys[pygame.K_a]:
-            print("a key pressed")
             self.rotate(-dt)
         if keys[pygame.K_d]:
             self.rotate(dt)
